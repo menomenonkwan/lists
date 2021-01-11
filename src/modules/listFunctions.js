@@ -3,6 +3,7 @@ import { buildNewTask } from './taskFunctions';
 import { findDateDistance, sortDates } from './getDate';
 import { lists } from './content';
 import menuLists from './checkLists';
+import { List } from './constructors';
 
 function addList(e) {
   e.preventDefault();
