@@ -8,7 +8,14 @@ function addNewMenuLink(e) {
 }
 
 function menuLists() {
-  if(!lists.length) { return; }
+  let listHTML;
+  if(!lists.length) { 
+    listHTML = ''; 
+  } else {
+    listHTML = lists.map(listName => `
+    <li data-id="${listName.id}">${listName.name}</li>
+  `).join('');
+  }
 
   const subNav = document.querySelector('.sub-nav');
   const listHTML = lists.map(listName => `
